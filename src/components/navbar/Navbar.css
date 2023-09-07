@@ -1,0 +1,55 @@
+.navbar {
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  border-bottom: 0.2px solid gray;
+}
+.pedgog_logo {
+  width: 38px;
+}
+.left_nav {
+  flex: 0.2;
+  display: flex;
+  cursor: pointer;
+  gap: 10px;
+}
+.left_nav_text {
+  display: flex;
+  flex-direction: column;
+}
+.left_nav_text > h1 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+.center_nav {
+  flex: 0.8;
+  display: flex;
+  justify-content: space-around;
+  max-width: 60%;
+}
+.center_nav_text {
+  padding: 5px 20px;
+  border-radius: 20px;
+  transition: background-color 0.5s ease-in, transform 0.5s ease-in;
+}
+
+.center_nav_text:hover {
+  background-color: gainsboro;
+  transform: scale(1);
+}
+.center_nav_text > h4 {
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.right_nav {
+  flex: 0.2;
+  display: flex;
+  justify-content: flex-end;
+}
+.right_nav > h4 {
+  font-weight: 500;
+  cursor: pointer;
+}
