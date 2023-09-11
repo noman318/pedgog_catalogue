@@ -53,3 +53,9 @@
   font-weight: 500;
   cursor: pointer;
 }
+
+.link_styles {
+  color: black;
+  white-space: nowrap;
+  text-decoration: none;
+}

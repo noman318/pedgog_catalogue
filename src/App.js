@@ -1,21 +1,19 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home/Home";
-import Navbar from "./components/navbar/Navbar";
+import Theme from "./components/Theme/Theme";
+import NavbarIndex from "./components/NavbarIndex/NavbarIndex";
 
 function App() {
   return (
     <Router>
       <div>
-        <Navbar />
+        <NavbarIndex />
+        {/* <Navigate to="/home" match={{ path: "/", exact: true }} /> */}
         <Routes>
+          {/* <Route element={<Navigate to="/home" replace />} /> */}
           <Route path="/home" element={<Home />} />
-          <Route element={<Navigate to="/home" replace />} />
+          <Route path="/theme" element={<Theme />} />
         </Routes>
       </div>
     </Router>

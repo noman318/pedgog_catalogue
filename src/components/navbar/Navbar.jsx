@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const navArr = ["Home", "Theme", "Popular", "Student Group"];
   return (
@@ -18,9 +19,11 @@ const Navbar = () => {
         </section>
         <section className="center_nav">
           {navArr?.map((nav, index) => (
-            <div key={index} className="center_nav_text">
-              <h4>{nav}</h4>
-            </div>
+            <Link to={`/${nav.toLowerCase()}`} className="link_styles">
+              <div key={index} className="center_nav_text">
+                <h4>{nav}</h4>
+              </div>
+            </Link>
           ))}
         </section>
         <section className="right_nav">
