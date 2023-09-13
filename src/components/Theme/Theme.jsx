@@ -16,7 +16,7 @@ const Theme = () => {
         <p className="breadcrumb">home &gt; {path}</p>
         <h2 className="heading">Vivek Units Catalogue</h2>
       </section>
-      <section className="button_div">
+      <section className="button_div_theme">
         <button>Discover more</button>
       </section>
       {/* <main className={`${modal ? "theme_hide" : ""}`}> */}

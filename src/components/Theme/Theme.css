@@ -9,11 +9,11 @@
 .heading {
   font-weight: 500;
 }
-.button_div {
+.button_div_theme {
   display: flex;
   justify-content: flex-end;
 }
-.button_div > button {
+.button_div_theme > button {
   width: 16%;
   background-color: #d14318;
   border: none;
@@ -24,7 +24,7 @@
   font-weight: 500;
   font-size: 18px;
 }
-.button_div > button:hover {
+.button_div_theme > button:hover {
   background-color: #df481a;
 }
 .theme_cards {
