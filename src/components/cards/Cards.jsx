@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Cards.css";
 import Modal from "../modal/Modal";
 import { useModal } from "../../ModalContext";

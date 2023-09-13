@@ -7,6 +7,7 @@ import { useModal } from "../../ModalContext";
 const Theme = () => {
   const location = useLocation();
   let path = location.pathname.split("/")[1];
+  // eslint-disable-next-line
   const { modal, setModal } = useModal(false);
   console.log("modal in theme", modal);
   //   console.log("ThemeOneData", ThemeOneData);
