@@ -7,7 +7,7 @@ const NavbarIndex = () => {
   const location = useLocation();
   let pathName = location.pathname.split("/")[1];
   console.log("pathName", pathName);
-  return <div>{pathName === "home" ? <Navbar /> : <Breadcrumb />}</div>;
+  return <div>{pathName === "home" || "/" ? <Navbar /> : <Breadcrumb />}</div>;
 };
 
 export default NavbarIndex;

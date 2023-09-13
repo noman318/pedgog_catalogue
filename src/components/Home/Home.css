@@ -32,7 +32,7 @@
 }
 .button_div {
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
 }
 .button_div > button {
   width: 10%;

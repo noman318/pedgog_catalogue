@@ -12,6 +12,7 @@ function App() {
         {/* <Navigate to="/home" match={{ path: "/", exact: true }} /> */}
         <Routes>
           {/* <Route element={<Navigate to="/home" replace />} /> */}
+          <Route path="*" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/theme" element={<Theme />} />
         </Routes>
