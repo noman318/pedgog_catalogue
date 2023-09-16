@@ -3,8 +3,8 @@ import "./Cards.css";
 import Modal from "../modal/Modal";
 import { useModal } from "../../ModalContext";
 
-const Cards = ({ data, color }) => {
-  // console.log("props", data);
+const Cards = ({ data, color, openModal }) => {
+  console.log("props", data);
   // console.log("data in props", data);
   // console.log("data in props", color);
   // const { sessions } = data;
@@ -15,15 +15,10 @@ const Cards = ({ data, color }) => {
 
   return (
     <React.Fragment>
-      {/* {console.log("TAG:", data)} */}
-      {}
-      <Modal open={modal} onClose={() => setModal(false)} modal_data={data} />
       <div
         className={`cards ${color === "grey" ? "row2" : "row1"}`}
         onClick={(e) => {
-          console.log("event", e.target);
-          setModalData(data);
-          setModal(true);
+          openModal(data);
         }}
       >
         <div className="card_title">

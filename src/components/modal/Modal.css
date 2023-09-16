@@ -5,7 +5,7 @@
 }
 .modal_container {
   background-color: whitesmoke;
-  max-width: 600px;
+  max-width: 70%;
   width: 100%;
   position: fixed;
   top: 50%;
@@ -29,6 +29,8 @@
   display: flex;
   justify-content: space-between;
   z-index: 10;
+  position: sticky;
+  top: 0;
 }
 .header_block > p {
   padding: 5px 10px;
@@ -59,14 +61,16 @@
 }
 .modal_title {
   font-weight: 500;
+  text-wrap: balance;
 }
 .modal_content {
   margin-top: 6%;
   padding: 0 10px;
 }
 .sessions_data > h3 {
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .session_content {
   background-color: white;
@@ -95,4 +99,18 @@
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+}
+.version_data {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+
+.version_data > p {
+  text-wrap: balance;
+  font-weight: 400;
+  /* font-size: 15px; */
 }
