@@ -10,7 +10,7 @@ const Modal = ({ open, onClose, modal_data }) => {
       <div className="modal_container">
         <header className="header_block">
           <p onClick={onClose}>Back</p>
-          <button className="button_div">Subscribe</button>
+          <button className="button_div_modal">Subscribe</button>
         </header>
         <div className="modal_content">
           <h1 className="modal_title">{modal_data?.name}</h1>

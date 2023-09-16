@@ -36,7 +36,7 @@
   border-radius: 20px;
   transform: scale(1);
 }
-.button_div {
+.button_div_modal {
   width: 20%;
   background-color: white;
   border: none;
@@ -47,7 +47,7 @@
   cursor: pointer;
   transition: background-color 0.5s ease-in, transform 0.5s ease-in;
 }
-.button_div:hover {
+.button_div_modal:hover {
   background-color: #df481a;
   color: white;
 }
