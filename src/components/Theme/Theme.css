@@ -31,12 +31,11 @@
   display: flex;
   gap: 1.2rem;
   justify-content: flex-start;
-}
-.theme_cards {
   min-width: 100%;
   overflow-x: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: proximity;
+  padding: 22px 0;
 }
 .theme_cards::-webkit-scrollbar {
   display: none;

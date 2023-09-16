@@ -9,6 +9,10 @@
   justify-content: space-between;
   max-width: 100%;
   cursor: pointer;
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+}
+.cards:hover {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .row1 {
   background-color: #f8dab9;
@@ -22,12 +26,21 @@
 }
 .card_title :first-child {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
+  width: 300px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card_image {
+  height: 150px;
+  padding: 10px;
 }
 .icon {
   font-size: 25px;
   margin-top: -10px;
   cursor: pointer;
+  font-weight: bolder;
 }
 .card_data {
   display: flex;

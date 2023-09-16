@@ -1,0 +1,412 @@
+{
+  "themes": ["Positive thinking series", "Citizenship series"],
+  "courses": [
+    {
+      "name": "Positive thinking series Program-Karantaka",
+      "theme": "Positive thinking series",
+      "description": "This program is to inculcate positive thinking in you.",
+      "image": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+      "versions": ["Engineering Students", "Diploma Students", "MBA Students"],
+      "Languages": ["English", "Hindi", "Kannada"],
+      "subscriberCount": 30000,
+      "buttonText": "Save",
+      "programTags": [
+        "positiveThinking",
+        "2-Day",
+        "Contribution",
+        "CognitiveShift"
+      ],
+      "sessions": [
+        {
+          "title": "Believe in yourself",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 20
+        },
+        {
+          "title": "Handling failure",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 30
+        },
+        {
+          "title": "Create your own destiny",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 40
+        },
+        {
+          "title": "Be Bold & Fearless",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 20
+        },
+        {
+          "title": "Be open to learning from anyone",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 30
+        },
+        {
+          "title": "Face the brutes!",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 40
+        },
+        {
+          "title": "Find the truth yourself",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 20
+        },
+        {
+          "title": "Take up an ideal and give your whole life to it",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 30
+        },
+        {
+          "title": "Be true to yourself ",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 40
+        },
+        {
+          "title": "Sheep thinking and lion thinking",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 40
+        }
+      ]
+    },
+    {
+      "name": "Hin- Positive thinking series Program",
+      "theme": "Positive thinking series",
+      "description": "This program is to inculcate positive thinking in you.",
+      "image": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+      "versions": ["Engineering Students", "Diploma Students", "MBA Students"],
+      "Languages": ["English", "Hindi", "Marathi", "Punjabi"],
+      "subscriberCount": 40000,
+      "buttonText": "Subscribe",
+
+      "programTags": [
+        "positiveThinking",
+        "2-Day",
+        "Contribution",
+        "CognitiveShift"
+      ],
+      "sessions": [
+        {
+          "title": "Believe in yourself",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 20
+        },
+        {
+          "title": "Handling failure",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 30
+        },
+        {
+          "title": "Create your own destiny",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 40
+        },
+        {
+          "title": "Be Bold & Fearless",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 20
+        },
+        {
+          "title": "Be open to learning from anyone",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 30
+        },
+        {
+          "title": "Face the brutes!",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 40
+        },
+        {
+          "title": "Find the truth yourself",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 20
+        },
+        {
+          "title": "Take up an ideal and give your whole life to it",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 30
+        },
+        {
+          "title": "Be true to yourself ",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 40
+        },
+        {
+          "title": "Sheep thinking and lion thinking",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 40
+        }
+      ]
+    },
+    {
+      "name": "Citizenship series Program",
+      "theme": "Citizenship series",
+      "description": "This program is to inculcate Citizenship in you.",
+      "image": "https://via.placeholder.com/150?text=Web+Dev+1",
+      "buttonText": "Save",
+      "sessions": [
+        {
+          "title": "Believe in yourself",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 20
+        },
+        {
+          "title": "Handling failure",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 30
+        },
+        {
+          "title": "Create your own destiny",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 40
+        },
+        {
+          "title": "Be Bold & Fearless",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 20
+        },
+        {
+          "title": "Be open to learning from anyone",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 30
+        },
+        {
+          "title": "Face the brutes!",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 40
+        },
+        {
+          "title": "Find the truth yourself",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 20
+        },
+        {
+          "title": "Take up an ideal and give your whole life to it",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 30
+        },
+        {
+          "title": "Be true to yourself ",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 40
+        },
+        {
+          "title": "Sheep thinking and lion thinking",
+          "description": "Session's description",
+          "ModuleTags": [
+            "positiveThinking",
+            "2-Day",
+            "Contribution",
+            "CognitiveShift"
+          ],
+          "ModuleThumbnailImage": "https://auth.pedgog.in/static/media/board.4d69f8a3.svg",
+          "duration": 40
+        }
+      ]
+    }
+  ]
+}

@@ -20,13 +20,40 @@
   padding: 35px 45px;
   z-index: 10;
 }
-.header {
+.header_block {
   display: flex;
   justify-content: space-between;
 }
-.header > p {
+.header_block > p {
+  padding: 5px 10px;
   cursor: pointer;
+  border: 1px solid white;
+  border-radius: 20px;
+  transition: border 0.5s ease-in, transform 0.5s ease-in;
+}
+.header_block > p:hover {
+  border: 1px solid slategray;
+  border-radius: 20px;
+  transform: scale(1);
+}
+.button_div {
+  width: 20%;
+  background-color: white;
+  border: none;
+  color: #ff3c00;
+  padding: 7px 10px;
+  border: 1px solid #ff3c00;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in, transform 0.5s ease-in;
+}
+.button_div:hover {
+  background-color: #df481a;
+  color: white;
 }
 .modal_content {
   margin-top: 10%;
+}
+.modal_title {
+  font-weight: 500;
 }

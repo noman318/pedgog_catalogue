@@ -1,16 +1,21 @@
 import React from "react";
 import "./Theme.css";
 import { useLocation } from "react-router-dom";
-import { ThemeOneData, ThemeTwoData } from "../../data/theme";
 import Cards from "../cards/Cards";
 import { useModal } from "../../ModalContext";
+import courses_data from "../../data/courses_data.json";
 const Theme = () => {
+  // console.log("courses_data", courses_data);
   const location = useLocation();
   let path = location.pathname.split("/")[1];
   // eslint-disable-next-line
   const { modal, setModal } = useModal(false);
-  console.log("modal in theme", modal);
-  //   console.log("ThemeOneData", ThemeOneData);
+  // console.log("modal in theme", modal);
+
+  const { themes } = courses_data;
+  const { courses } = courses_data;
+  // console.log("themes", themes);
+  // console.log("courses", courses);
   return (
     <div className="theme_container">
       <section>
@@ -21,19 +26,24 @@ const Theme = () => {
         <button>Discover more</button>
       </section>
       {/* <main className={`${modal ? "theme_hide" : ""}`}> */}
-      <h2>Theme 1</h2>
-      <section className="theme_cards">
-        {ThemeOneData?.map((theme) => (
-          <Cards data={theme} key={theme.id} />
-        ))}
-      </section>
-
-      <h2 style={{ marginTop: "5%" }}>Theme 2</h2>
-      <section className="theme_cards">
-        {ThemeTwoData?.map((theme) => (
-          <Cards data={theme} key={theme?.id} color={"grey"} />
-        ))}
-      </section>
+      {themes?.map((theme) => (
+        <>
+          <h2>{theme}</h2>
+          <section className="theme_cards">
+            {courses
+              ?.filter((theme_data) => theme_data?.theme === theme)
+              ?.map((data, index) => (
+                <>
+                  <Cards
+                    data={data}
+                    index={index}
+                    color={theme === "Citizenship series" ? "grey" : ""}
+                  />
+                </>
+              ))}
+          </section>
+        </>
+      ))}
       {/* </main> */}
     </div>
   );

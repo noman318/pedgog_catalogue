@@ -1,18 +1,19 @@
 import React from "react";
 import "./Modal.css";
-const Modal = ({ open, onClose }) => {
+import courses_data from "../../data/courses_data.json";
+const { courses } = courses_data;
+const Modal = ({ open, onClose, modal_data }) => {
+  // console.log("modal_data", modal_data);
   if (!open) return null;
-
   return (
     <div className="overlay">
       <div className="modal_container">
-        <header className="header">
+        <header className="header_block">
           <p onClick={onClose}>Back</p>
-          <button>Subscribe</button>
+          <button className="button_div">Subscribe</button>
         </header>
         <div className="modal_content">
-          <h5>Contributor Program</h5>
-          {/* <h5>Contributor Program</h5> */}
+          <h1 className="modal_title">{modal_data?.name}</h1>
         </div>
       </div>
     </div>
