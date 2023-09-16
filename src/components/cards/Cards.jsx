@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./Cards.css";
 import Modal from "../modal/Modal";
 import { useModal } from "../../ModalContext";
-import courses_data from "../../data/courses_data.json";
-const { courses } = courses_data;
 
 const Cards = ({ data, color }) => {
   // console.log("props", data);
@@ -19,7 +17,7 @@ const Cards = ({ data, color }) => {
     <React.Fragment>
       {/* {console.log("TAG:", data)} */}
       {}
-      <Modal open={modal} onClose={() => setModal(false)} />
+      <Modal open={modal} onClose={() => setModal(false)} modal_data={data} />
       <div
         className={`cards ${color === "grey" ? "row2" : "row1"}`}
         onClick={(e) => {
