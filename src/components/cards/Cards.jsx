@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Cards.css";
-import Modal from "../modal/Modal";
-import { useModal } from "../../ModalContext";
+// import Modal from "../modal/Modal";
+// import { useModal } from "../../ModalContext";
 
 const Cards = ({ data, color, openModal }) => {
   console.log("props", data);
@@ -9,7 +9,7 @@ const Cards = ({ data, color, openModal }) => {
   // console.log("data in props", color);
   // const { sessions } = data;
   // console.log("sessions", sessions);
-  const { modal, setModal } = useModal(false);
+  // const { modal, setModal } = useModal(false);
   // const [modalData, setModalData] = useState();
   // console.log("modal", modal);
 
