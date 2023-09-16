@@ -10,7 +10,7 @@ const Cards = ({ data, color, openModal }) => {
   // const { sessions } = data;
   // console.log("sessions", sessions);
   const { modal, setModal } = useModal(false);
-  const [modalData, setModalData] = useState();
+  // const [modalData, setModalData] = useState();
   // console.log("modal", modal);
 
   return (
@@ -30,7 +30,7 @@ const Cards = ({ data, color, openModal }) => {
           <button>{data?.buttonText}</button>
         </span>
       </div>
-      {console.log("modalDataAftercomponent", modalData)}
+      {/* {console.log("modalDataAftercomponent", modalData)} */}
     </React.Fragment>
   );
 };

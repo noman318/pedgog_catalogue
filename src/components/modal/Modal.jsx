@@ -22,47 +22,57 @@ const Modal = ({ open, onClose, modal_data }) => {
           <h1 className="modal_title">{modal_data?.name}</h1>
           <p>{modal_data?.description}</p>
           <div className="modal_maps">
-            <div className="version_data">
-              <p>Verisons : </p>
-              {versions?.map((data, index) => (
-                <p key={index}>{data},</p>
-              ))}
-            </div>
-            <p>Subscriber count: {modal_data?.subscriberCount}</p>
-            <div className="version_data">
-              <p>Languages : </p>
-              {Languages?.map((data, index) => (
-                <p key={index}>{data}</p>
-              ))}
-            </div>
-            <div className="version_data">
-              <p>Tag : </p>
-              {programTags?.map((data, index) => (
-                <p key={index}>{data}</p>
-              ))}
-            </div>
-          </div>
-          <div className="sessions_data">
-            <h3>Sessions:</h3>
-            {sessions?.map((data, index) => (
-              <div className="session_content" key={index}>
-                <div className="session_details">
-                  <img src={data.ModuleThumbnailImage} alt="" />
-                  <p>{data.title}</p>
-                  <p>{data.description}</p>
-                  <p>Duration: {data.duration}</p>
-                </div>
-                <hr />
-                <div className="modules">
-                  {data.ModuleTags?.map((data, index) => (
-                    <div key={index} className="module_tags">
-                      <p>{data},</p>
-                    </div>
-                  ))}
-                </div>
+            {versions && (
+              <div className="version_data">
+                <p>Verisons : </p>
+                {versions?.map((data, index) => (
+                  <p key={index}>{data},</p>
+                ))}
               </div>
-            ))}
+            )}
+            {modal_data?.subscriberCount && (
+              <p>Subscriber count: {modal_data?.subscriberCount}</p>
+            )}
+            {Languages && (
+              <div className="version_data">
+                <p>Languages : </p>
+                {Languages?.map((data, index) => (
+                  <p key={index}>{data}</p>
+                ))}
+              </div>
+            )}
+            {programTags && (
+              <div className="version_data">
+                <p>Tag : </p>
+                {programTags?.map((data, index) => (
+                  <p key={index}>{data}</p>
+                ))}
+              </div>
+            )}
           </div>
+          {sessions && (
+            <div className="sessions_data">
+              <h3>Sessions:</h3>
+              {sessions?.map((data, index) => (
+                <div className="session_content" key={index}>
+                  <div className="session_details">
+                    <img src={data.ModuleThumbnailImage} alt="" />
+                    <p>{data.title}</p>
+                    <p>{data.description}</p>
+                    <p>Duration: {data.duration}</p>
+                  </div>
+                  <hr />
+                  <div className="modules">
+                    {data.ModuleTags?.map((data, index) => (
+                      <div key={index} className="module_tags">
+                        <p>{data},</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
