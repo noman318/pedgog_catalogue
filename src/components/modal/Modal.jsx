@@ -23,31 +23,40 @@ const Modal = ({ open, onClose, modal_data }) => {
           <p>{modal_data?.description}</p>
           <div className="modal_maps">
             {versions && (
-              <div className="version_data">
-                <p>Verisons : </p>
-                {versions?.map((data, index) => (
-                  <p key={index}>{data},</p>
-                ))}
-              </div>
+              <>
+                <h3 className="title_tags">Verisons : </h3>
+                <div className="version_data">
+                  {versions?.map((data, index) => (
+                    <p key={index}>{data},</p>
+                  ))}
+                </div>
+              </>
             )}
             {modal_data?.subscriberCount && (
-              <p>Subscriber count: {modal_data?.subscriberCount}</p>
+              <div className="subs_count">
+                <h3 className="title_tags">Subscriber count:</h3>
+                <p>{modal_data?.subscriberCount}</p>
+              </div>
             )}
             {Languages && (
-              <div className="version_data">
-                <p>Languages : </p>
-                {Languages?.map((data, index) => (
-                  <p key={index}>{data}</p>
-                ))}
-              </div>
+              <>
+                <h3 className="title_tags">Available in : </h3>
+                <div className="version_data">
+                  {Languages?.map((data, index) => (
+                    <p key={index}>{data},</p>
+                  ))}
+                </div>
+              </>
             )}
             {programTags && (
-              <div className="version_data">
-                <p>Tag : </p>
-                {programTags?.map((data, index) => (
-                  <p key={index}>{data}</p>
-                ))}
-              </div>
+              <>
+                <h3 className="title_tags">Tag : </h3>
+                <div className="version_data">
+                  {programTags?.map((data, index) => (
+                    <p key={index}>{data}</p>
+                  ))}
+                </div>
+              </>
             )}
           </div>
           {sessions && (
