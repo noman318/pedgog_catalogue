@@ -74,28 +74,39 @@
 }
 .session_content {
   background-color: white;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 .session_details {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
 }
 .session_details > img {
-  width: 95%;
-}
-.session_details > p:nth-child(2) {
-  color: #ff0000;
-  margin-top: 10px;
-  font-weight: 600;
-  font-size: larger;
+  width: 15%;
 }
 
 .session_details > p {
   margin-top: 5px;
 }
+.sessions_data_internal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.sessions_data_internal > p:nth-child(1) {
+  color: #ff0000;
+  /* margin-top: 10px; */
+  /* font-weight: 600; */
+  /* font-size: larger; */
+}
 .modules {
-  margin-top: 20px;
+  margin-top: -2%;
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;

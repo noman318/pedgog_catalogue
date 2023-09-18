@@ -57,17 +57,18 @@ const Modal = ({ open, onClose, modal_data }) => {
                 <div className="session_content" key={index}>
                   <div className="session_details">
                     <img src={data.ModuleThumbnailImage} alt="" />
-                    <p>{data.title}</p>
-                    <p>{data.description}</p>
-                    <p>Duration: {data.duration}</p>
-                  </div>
-                  <hr />
-                  <div className="modules">
-                    {data.ModuleTags?.map((data, index) => (
-                      <div key={index} className="module_tags">
-                        <p>{data},</p>
+                    <div className="sessions_data_internal">
+                      <p>{data.title},</p>
+                      <p>{data.description},</p>
+                      <p>Duration: {data.duration}</p>
+                      <div className="modules">
+                        {data.ModuleTags?.map((data, index) => (
+                          <div key={index} className="module_tags">
+                            <p>{data},</p>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                   </div>
                 </div>
               ))}
