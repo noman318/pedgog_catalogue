@@ -1,4 +1,5 @@
-FROM node:22
+# Stage 1: Build React app
+FROM node:22 AS build
 
 WORKDIR /app
 
@@ -10,7 +11,15 @@ COPY . .
 
 RUN npm run build
 
+
+# Stage 2: Production runtime
+FROM node:22-alpine
+
+WORKDIR /app
+
 RUN npm install -g serve
+
+COPY --from=build /app/build ./build
 
 EXPOSE 3000
 
