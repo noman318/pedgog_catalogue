@@ -6,19 +6,47 @@ env:
     DOCKER_REGISTRY_PASSWORD: /my-app/docker-creds/passwd
     DOCKER_REGISTRY_URL: /my-app/docker-creds/docker_registry/url
 
+  variables:
+    EC2_INSTANCE_ID: "i-012615dd115efa5fc"
+    IMAGE_NAME: "react-app"
+    CONTAINER_NAME: "react-app"
+    APP_PORT: "3000"
+
 phases:
   pre_build:
     commands:
       - echo "Logging in to Docker Hub"
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
+      - export IMAGE_TAG="$CODEBUILD_BUILD_NUMBER"
+      - echo "Image tag: $IMAGE_TAG"
 
   build:
     commands:
       - echo "Building React Docker image"
-      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/react-app:latest" .
+      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG" .
+      - docker tag "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG" "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/$IMAGE_NAME:latest"
 
   post_build:
     commands:
-      - echo "Pushing React Docker image to Docker Hub"
-      - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/react-app:latest"
-      - echo "Build and push successful"
+      - echo "Pushing versioned image"
+      - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG"
+
+      - echo "Updating latest tag"
+      - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/$IMAGE_NAME:latest"
+
+      - echo "Deploying image to EC2 using SSM"
+
+      - >
+        aws ssm send-command
+        --region us-east-1
+        --document-name "AWS-RunShellScript"
+        --targets "Key=instanceIds,Values=$EC2_INSTANCE_ID"
+        --parameters 'commands=[
+          "docker pull '$DOCKER_REGISTRY_URL'/'$DOCKER_REGISTRY_USERNAME'/'$IMAGE_NAME':'$IMAGE_TAG'",
+          "docker stop '$CONTAINER_NAME' || true",
+          "docker rm '$CONTAINER_NAME' || true",
+          "docker run -d --name '$CONTAINER_NAME' -p '$APP_PORT':'$APP_PORT' '$DOCKER_REGISTRY_URL'/'$DOCKER_REGISTRY_USERNAME'/'$IMAGE_NAME':'$IMAGE_TAG'"
+        ]'
+        --comment "Deploy React application version $IMAGE_TAG"
+
+      - echo "Deployment command sent to EC2"
