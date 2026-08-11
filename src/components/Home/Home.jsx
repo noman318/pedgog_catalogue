@@ -6,7 +6,7 @@ const Home = () => {
     <div className="main_container">
       <main className="home">
         <section className="left_section">
-          <h1>What is this catalogue website is all about ?</h1>
+          <h1>What is this catalogue website is all about created by Noman?</h1>
           <br />
           <h1>Why we made it can be written here ?</h1>
         </section>
