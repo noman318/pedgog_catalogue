@@ -8,7 +8,6 @@ const Home = () => {
         <section className="left_section">
           <h1>What is this catalogue website is all about created by Noman?</h1>
           <br />
-          <h1>Why we made it can be written here ?</h1>
         </section>
         <section className="right_section">
           <img src="./test.jpg" alt="" />
