@@ -8,7 +8,10 @@ const Home = () => {
         <section className="left_section">
           <h4>What is this catalogue website is all about created by Noman</h4>
           <br />
-          <i>THIS WAS A CI-CD PRACTICE WITH AWS CODE BUILD AND CODE PIPELINE</i>
+          <i>
+            THIS WAS A CI-CD PRACTICE WITH AWS CODE BUILD AND CODE PIPELINE WITH
+            SSM AND EC2 AS CODE DEPLOY
+          </i>
         </section>
         <section className="right_section">
           <img src="./test.jpg" alt="" />
