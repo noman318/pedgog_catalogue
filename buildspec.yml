@@ -18,18 +18,20 @@ phases:
       - echo "Logging in to Docker Hub"
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
       - export IMAGE_TAG="$CODEBUILD_BUILD_NUMBER"
-      - echo "Image tag: $IMAGE_TAG"
+      - export IMAGE_URI="$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG"
+      - echo "Image tag is $IMAGE_TAG"
+      - echo "Image URI is $IMAGE_URI"
 
   build:
     commands:
       - echo "Building React Docker image"
-      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG" .
-      - docker tag "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG" "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/$IMAGE_NAME:latest"
+      - docker build -t "$IMAGE_URI" .
+      - docker tag "$IMAGE_URI" "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/$IMAGE_NAME:latest"
 
   post_build:
     commands:
       - echo "Pushing versioned image"
-      - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/$IMAGE_NAME:$IMAGE_TAG"
+      - docker push "$IMAGE_URI"
 
       - echo "Updating latest tag"
       - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/$IMAGE_NAME:latest"
@@ -41,12 +43,12 @@ phases:
         --region us-east-1
         --document-name "AWS-RunShellScript"
         --targets "Key=instanceIds,Values=$EC2_INSTANCE_ID"
-        --parameters 'commands=[
-          "docker pull '$DOCKER_REGISTRY_URL'/'$DOCKER_REGISTRY_USERNAME'/'$IMAGE_NAME':'$IMAGE_TAG'",
-          "docker stop '$CONTAINER_NAME' || true",
-          "docker rm '$CONTAINER_NAME' || true",
-          "docker run -d --name '$CONTAINER_NAME' -p '$APP_PORT':'$APP_PORT' '$DOCKER_REGISTRY_URL'/'$DOCKER_REGISTRY_USERNAME'/'$IMAGE_NAME':'$IMAGE_TAG'"
-        ]'
+        --parameters "commands=[
+        \"docker pull $IMAGE_URI\",
+        \"docker stop $CONTAINER_NAME || true\",
+        \"docker rm $CONTAINER_NAME || true\",
+        \"docker run -d --name $CONTAINER_NAME -p $APP_PORT:$APP_PORT $IMAGE_URI\"
+        ]"
         --comment "Deploy React application version $IMAGE_TAG"
 
       - echo "Deployment command sent to EC2"
