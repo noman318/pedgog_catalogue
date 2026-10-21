@@ -1,26 +1,11 @@
-# Stage 1: Build React app
-FROM node:22 AS build
-
-WORKDIR /app
-
-COPY package*.json ./
-
-RUN npm install
-
-COPY . .
-
-RUN npm run build
-
-
-# Stage 2: Production runtime
-FROM node:22-alpine
-
-WORKDIR /app
-
-RUN npm install -g serve
-
-COPY --from=build /app/build ./build
-
+FROM node:22
+ENV PORT 3000
 EXPOSE 3000
 
-CMD ["serve", "-s", "build", "-l", "3000"]
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY package.json .
+RUN npm install
+COPY . .
+
+CMD ["npm", "start"]
