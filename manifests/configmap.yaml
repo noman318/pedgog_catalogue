@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: react-automated-deploy-config
+  namespace: namespace-workflow-1792605766890
+  labels:
+    app.kubernetes.io/name: react-automated-deploy
+    kubernetes.azure.com/generator: devhub
+data:
